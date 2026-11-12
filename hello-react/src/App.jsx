@@ -7,6 +7,10 @@ function App() {
   // 오늘의 발표자 — Header와 카드가 함께 쓰므로 둘의 가장 가까운 공통 부모인 App이 기억합니다
   const [presenter, setPresenter] = useState("");
 
+  useEffect(() => {
+    console.log("1");
+  }, []);
+
   // 처음 그려질 때 한 번, 그 뒤 발표자가 바뀔 때마다 브라우저 탭의 제목을 바꿉니다(사이드 이펙트)
   useEffect(() => {
     document.title = presenter ? `발표 : ${presenter} · 멤버 소개` : "멤버 소개";
